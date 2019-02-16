@@ -1,6 +1,7 @@
+variable "PROJECT_ID" {}
+
 provider "google" {
-        project = "[project-name]"
-        region  = "asia-northeast1"
+        project = "${var.PROJECT_ID}"
   }
 
   resource "google_compute_instance" "vm_instance" {
